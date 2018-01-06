@@ -14,21 +14,25 @@ class Con1():
     def terminate(self):
         self._running = False
 
-    def run(self, _q1, _q2):
-        time.sleep(3)
+    def run1(self, _q1):
+        while (True):
+            name = threading.currentThread().getName()
+            print "Consumer thread 1:  ", name
+            number = _q1.get();
+            print number
+            print
+            time.sleep(3)
+            _q1.task_done()
+ 
 
+    def run2(self, _q2):
+        while (True):
+            name = threading.currentThread().getName()
+            print "Consumer thread 2:  ", name
+            command = _q2.get();
+            print command
+            print
+            time.sleep(4)
+            _q2.task_done()
+ 
 
-if __name__ == '__main__':
-    numbers  = Queue.Queue(maxsize = 0)
-    commands = Queue.Queue(maxsize = 0)
-
-    # Start Producer 1
-
-    # Start Producer 2
-
-    # Start Consumer 1
-
-    commands.join()
-
-    # May have to turn off the number generator
-    numbers.join()

@@ -1,4 +1,5 @@
 import time
+import threading
 
 class Pro1():
     """
@@ -12,4 +13,10 @@ class Pro1():
         self._running = False
 
     def run(self, _q):
-        time.sleep(3)
+        while True:
+            name = threading.currentThread().getName()
+            print "Producer thread:  ", name
+            item = 'item-1'
+            _q.put(item)
+            print item
+            time.sleep(4)

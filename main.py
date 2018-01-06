@@ -13,11 +13,13 @@ qCommands = Queue.Queue(maxsize=0)
 
 pro1Thread = threading.Thread(target=pro1.run, args=(qNumbers,))
 pro2Thread = threading.Thread(target=pro2.run, args=(qCommands,))
-con1Thread = threading.Thread(target=con1.run, args=(qNumbers, qCommands,))
+con1Thread1 = threading.Thread(target=con1.run1, args=(qNumbers,))
+con1Thread2 = threading.Thread(target=con1.run2, args=(qCommands,))
 
 pro1Thread.start()
 pro2Thread.start()
-con1Thread.start()
+con1Thread1.start()
+con1Thread2.start()
 
 qNumbers.join()
 qCommands.join()
