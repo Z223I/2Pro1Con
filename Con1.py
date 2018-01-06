@@ -30,7 +30,7 @@ class Con1():
             name = threading.currentThread().getName()
             print "Consumer thread 2:  ", name
             command = _q2.get();
-            print command
+            print "Here is the command... ", command
             print
             time.sleep(4)
             _q2.task_done()

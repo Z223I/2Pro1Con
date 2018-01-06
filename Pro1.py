@@ -16,7 +16,7 @@ class Pro1():
         while True:
             name = threading.currentThread().getName()
             print "Producer thread:  ", name
-            item = 'item-1'
-            _q.put(item)
-            print item
+            number = 5
+            _q.put(number)
+            print number
             time.sleep(4)

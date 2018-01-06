@@ -14,9 +14,8 @@ class Pro2():
 
     def run(self, _q):
         while True:
+            command = raw_input("Enter command: ")
             name = threading.currentThread().getName()
             print "Producer thread:  ", name
-            item = 'command-1'
-            _q.put(item)
-            print item
-            time.sleep(4)
+            _q.put(command)
+            print command
