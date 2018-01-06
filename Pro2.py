@@ -1,6 +1,6 @@
-class Pro1():
+class Pro2():
     """
-    Producer 1 generates numbers.
+    Producer 2 generates commands.
     """
 
     def __init__(self):
