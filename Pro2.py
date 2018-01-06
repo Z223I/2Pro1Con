@@ -1,3 +1,6 @@
+import time
+
+
 class Pro2():
     """
     Producer 2 generates commands.

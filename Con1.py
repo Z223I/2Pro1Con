@@ -1,5 +1,7 @@
 import threading
 import Queue
+import time
+
 
 class Con1():
     """

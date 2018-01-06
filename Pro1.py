@@ -1,3 +1,5 @@
+import time
+
 class Pro1():
     """
     Producer 1 generates numbers.
