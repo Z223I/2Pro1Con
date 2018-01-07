@@ -13,7 +13,7 @@ class Pro2():
         self._running = False
 
     def run(self, _q, _qQuit):
-        while True:
+        while self._running:
             command = raw_input("Enter command: ")
             name = threading.currentThread().getName()
             print "Producer thread:  ", name

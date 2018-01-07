@@ -13,7 +13,7 @@ class Pro1():
         self._running = False
 
     def run(self, _q):
-        while True:
+        while self._running:
             name = threading.currentThread().getName()
             print "Producer thread:  ", name
             number = 5

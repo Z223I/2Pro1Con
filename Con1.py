@@ -17,7 +17,7 @@ class Con1():
         self._running = False
 
     def run1(self, _q1):
-        while (True):
+        while self._running:
             name = threading.currentThread().getName()
             print "Consumer thread 1:  ", name
             number = _q1.get();
@@ -28,7 +28,7 @@ class Con1():
  
 
     def run2(self, _q2):
-        while (True):
+        while self._running:
             name = threading.currentThread().getName()
             print "Consumer thread 2:  ", name
             command = _q2.get();
