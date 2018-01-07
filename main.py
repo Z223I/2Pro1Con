@@ -6,10 +6,6 @@ from Pro1 import Pro1
 from Pro2 import Pro2
 from Con1 import Con1
 
-global isDone
-
-isDone = False
-
 
 
 pro1 = Pro1()
