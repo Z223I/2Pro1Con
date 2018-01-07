@@ -37,15 +37,16 @@ qQuit.task_done()
 
 print "Recieved quit command:"
 
-print "term pro1"
 pro1.terminate()
 pro2.terminate()
 con1.terminate()
 con2.terminate()
+print "terminated 4 threads"
 
-print "numbers join"
 qNumbers.join()
-print "commands join"
 qCommands.join()
-print "quit join"
 qQuit.join()
+print "joined 3 queues"
+
+
+print "Bye!"

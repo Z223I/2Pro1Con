@@ -21,3 +21,4 @@ class Pro2():
             print command
             if command[0] == 'q' or command[0] == 'Q':
                 _qQuit.put(command)
+                break
