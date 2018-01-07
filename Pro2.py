@@ -12,10 +12,12 @@ class Pro2():
     def terminate(self):
         self._running = False
 
-    def run(self, _q):
+    def run(self, _q, _qQuit):
         while True:
             command = raw_input("Enter command: ")
             name = threading.currentThread().getName()
             print "Producer thread:  ", name
             _q.put(command)
             print command
+            if command[0] == 'q' or command[0] == 'Q':
+                _qQuit.put(command)

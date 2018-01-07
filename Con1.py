@@ -2,6 +2,7 @@ import threading
 import Queue
 import time
 
+global isDone
 
 class Con1():
     """
@@ -10,6 +11,7 @@ class Con1():
 
     def __init__(self):
         self._running = True
+        isDone = False
 
     def terminate(self):
         self._running = False
@@ -34,5 +36,3 @@ class Con1():
             print
             time.sleep(4)
             _q2.task_done()
- 
-
